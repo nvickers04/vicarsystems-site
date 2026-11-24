@@ -24,7 +24,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       background: var(--navy);
       color: var(--cream);
       font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
@@ -32,6 +32,11 @@
       text-rendering: optimizeLegibility;
     }
     main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: min(100%, 28rem);
       padding: 2rem 1.5rem;
       text-align: center;
@@ -50,6 +55,17 @@
       text-transform: uppercase;
       color: var(--cream);
     }
+    .note {
+      width: min(100%, 28rem);
+      padding: 0 1.5rem 1.75rem;
+      text-align: center;
+      font-size: 0.72rem;
+      line-height: 1.55;
+      font-weight: 400;
+      color: color-mix(in srgb, var(--cream) 68%, var(--navy));
+    }
+    .note p { margin: 0; }
+    .note a { color: var(--cream); }
   </style>
 </head>
 <body>
@@ -57,5 +73,8 @@
     <img class="logo" src="assets/vicar-logo.svg" alt="Vicar Systems" width="612" height="791">
     <p class="tagline">Coming soon</p>
   </main>
+  <footer class="note">
+    <p>This page does not collect personal information, use cookies, or run analytics. The page is hosted on GitHub Pages and delivered through Cloudflare, which may log technical data such as IP addresses. Questions: <a href="mailto:noah@vicarsystems.com">noah@vicarsystems.com</a>.</p>
+  </footer>
 </body>
 </html>
